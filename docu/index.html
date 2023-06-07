@@ -1,52 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Inter:wght@100;200;300;400;600;900&family=Mulish:wght@300&family=Source+Sans+Pro:ital,wght@1,900&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="style.css" async>
-    <link rel="stylesheet" href="normalize.css" async>
-    <title>Encriptador</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encriptador de Texto Online | Nombre del Sitio">
+  <title>Encriptador</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&family=Inter:wght@100;200;300;400;600;900&family=Mulish:wght@300&family=Source+Sans+Pro:ital,wght@1,900&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
-<body>
-    <header class="header"> 
-        <img src="img/vector.png" alt="Alura" loading="lazy">
-    </header>
 
-    <main class="main">
-        <section class="encript">
-            <div class="sect__entry">
-                <textarea id="texto" placeholder="Ingresa tu texto aqui" rows="4" cols="50"></textarea>
-                <h5>
-                    <span class="material-symbols-outlined">error</span>
-                    Solo textos en minúscula
-                </h5>
-            </div>  
+<body onload="iniNevada(100,80)">
+  <header class="header">
+    <h1><span>A</span>lura</h1>
+  </header>
 
-            <div class="sect___btn">
-                <button class="btn btn_focus" onclick="encriptarT()">Encriptar texto</button>
-                <button class="btn" onclick="desencriptarT()">Desencriptar</button>
-            </div>
-        </section>
+  <main class="main">
+    <section class="encript">
+      <div class="sect__entry">
+        <textarea id="texto" placeholder="Ingresa tu texto aquí" rows="4" cols="50"></textarea>
+        <h5>
+          <ion-icon name="alert-circle-outline"></ion-icon>
+          Solo textos en minúscula
+        </h5>
+      </div>
 
-        <section class="desencript">
-            <div class="resultado" id="resultado">
-                <img class="img__div" src="img/muneco.png" alt="" loading="lazy">
-            </div>
-            <button class="btn btn_copy" onclick="copiarT()">Copiar</button>
-        </section>
-    </main>
-    <footer>
-        <div class="items">
+      <div class="sect___btn">  
+        <button class="btn btn_focus" onclick="encriptarTexto()">Encriptar texto</button>
+        <button class="btn" onclick="desencriptarTexto()">Desencriptar</button>
+      </div>
+    </section>
 
-        </div>
-        <div class="items"></div>
-        <div class="items"></div>
-        <div class="items"></div>
-    </footer>
+    <section class="desencript">
+      <div class="resultado" id="resultado">
+        <img class="img__div" src="muneco.png" alt="Ilustración de un muñeco">
+      </div>
+      <button class="btn btn_copy" onclick="copiarTexto()">Copiar</button>
+    </section>
+  </main>
 
-    <script src="app.js"></script>
+  <footer class="foot">
+    <div class="items">
+      
+      <a href="https://github.com/Luigidaniel" target="_blank" rel="noopener noreferrer">
+        <span>GitHub</span>
+        <ion-icon class="icons" name="logo-github"></ion-icon>
+      </a>
+    </div>
+    <div class="items">
+      <a href="https://www.linkedin.com/in/luigi-daniel-caicedo/" target="_blank" rel="noopener noreferrer">
+        <span>LinkedIn</span>
+        <ion-icon class="icons" name="logo-linkedin"></ion-icon>
+      </a>
+    </div>
+    <div class="items">
+      <a href="https://instagram.com/luigidanielc?igshid=MzNlNGNkZWQ4Mg==" target="_blank" rel="noopener noreferrer">
+        <span>Instagram</span>
+        <ion-icon class="icons" name="logo-instagram"></ion-icon>
+      </a>
+    </div>
+    <div class="items">
+      <a href="https://twitter.com/LuigidanielC?t=Oa7DuzdV8JqQWPexlzw95A&s=09" target="_blank" rel="noopener noreferrer">
+        <span>Twitter</span>
+        <ion-icon class="icons" name="logo-twitter"></ion-icon>
+      </a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
+<!--Hecho por Luigi Daniel Caicedo-->
 </html>
